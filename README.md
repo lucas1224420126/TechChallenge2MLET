@@ -1,8 +1,8 @@
-# Extração de Dados Embrapa
+# 🍇 Extração de Dados Embrapa
 
 Este projeto realiza a extração de dados da Embrapa utilizando o FastAPI, conectando-se diretamente ao site da Embrapa [VitiBrasil](http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_01). O usuário pode extrair dados de produção, processamento, comercialização, importação e exportação. Os dados são retornados em formato CSV.
 
-## Índice
+## 📜 Índice
 
 - [Instalação](#instalação)
 - [Uso](#uso)
@@ -10,8 +10,9 @@ Este projeto realiza a extração de dados da Embrapa utilizando o FastAPI, cone
 - [Consultas Disponíveis](#consultas-disponíveis)
 - [Licença](#licença)
 - [Contato](#contato)
+- [Autores](#autores)
 
-## Instalação
+## 💻 Instalação
 
 Para configurar o ambiente de desenvolvimento e instalar todas as dependências necessárias, siga os passos abaixo:
 
@@ -28,68 +29,18 @@ Para configurar o ambiente de desenvolvimento e instalar todas as dependências 
     ```
 
 3. Crie e ative um ambiente virtual:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-    ```
-
-4. Instale as dependências:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Uso
-
-Para executar o FastAPI, utilize o seguinte comando dentro do seu ambiente virtual:
-
-```bash
-uvicorn app.main:app --reload
-
-
-
-
-
-
-Com base nas informações fornecidas, aqui está um modelo de README para o seu projeto de extração de dados da Embrapa utilizando o FastAPI:
-
-```markdown
-# Extração de Dados Embrapa
-
-Este projeto realiza a extração de dados da Embrapa utilizando o FastAPI, conectando-se diretamente ao site da Embrapa [VitiBrasil](http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_01). O usuário pode extrair dados de produção, processamento, comercialização, importação e exportação. Os dados são retornados em formato CSV.
-
-## Índice
-
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [Autenticação](#autenticação)
-- [Consultas Disponíveis](#consultas-disponíveis)
-- [Licença](#licença)
-- [Contato](#contato)
-
-## Instalação
-
-Para configurar o ambiente de desenvolvimento e instalar todas as dependências necessárias, siga os passos abaixo:
-
-1. Clone este repositório:
-
-    ```bash
-    git clone https://github.com/seu_usuario/seu_projeto.git
-    ```
-
-2. Entre no diretório do projeto:
-
-    ```bash
-    cd seu_projeto
-    ```
-
-3. Crie e ative um ambiente virtual:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
-    ```
+    - Criando o ambiente.    
+        ```bash
+        python -m venv venv
+        ```
+    - Ativando no Linux.      
+        ```bash
+        source venv/bin/activate  
+        ```
+    - Ativando no Windowns.
+        ```bash
+        venv\Scripts\activate     
+        ```        
 
 4. Instale as dependências:
 
@@ -97,7 +48,7 @@ Para configurar o ambiente de desenvolvimento e instalar todas as dependências 
     pip install -r requirements.txt
     ```
 
-## Uso
+## 🏹 Uso
 
 Para executar o FastAPI, utilize o seguinte comando dentro do seu ambiente virtual:
 
@@ -109,7 +60,7 @@ Certifique-se de estar na pasta correta ao executar o comando. Após iniciar, vo
 
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-## Autenticação
+## 🔐 Autenticação
 
 Estamos utilizando um método de autenticação, então será necessário validar-se para realizar as consultas.
 
@@ -119,28 +70,36 @@ Estamos utilizando um método de autenticação, então será necessário valida
 4. No topo da página, clique no botão verde `Authorize`.
 5. Insira o `username`, `password`, e as informações de token armazenadas, depois clique em "Authorize".
 
-## Consultas Disponíveis
+## 📋 Consultas Disponíveis
 
-### Consulta de Produção
+### 🎯 Consulta de Produção
 
 Retorna os dados de produção de vinhos, sucos e derivados do Rio Grande do Sul.
 
-### Consulta de Processamento
+### 🎯Consulta de Processamento
 
 Retorna dados de quantidade de uvas processadas no Rio Grande do Sul, incluindo variedades viníferas, americanas, híbridas, uvas de mesa e sem classificação.
 
-### Consulta de Comercialização
+### 🎯 Consulta de Comercialização
 
 Retorna dados de comercialização de vinhos e derivados no Rio Grande do Sul.
 
-### Consulta de Importação
+### 🎯 Consulta de Importação
 
 Retorna dados de importação de derivados de uva, incluindo vinhos de mesa, espumantes, uvas frescas, uvas passas e sucos de uva.
 
-### Consulta de Exportação
+### 🎯 Consulta de Exportação
 
 Retorna dados de exportação de derivados de uva, incluindo vinhos de mesa, espumantes, uvas frescas e sucos de uva.
 
-## Licença
+## 🔑 Licença
 
 Este projeto está licenciado sob a licença XYZ - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 🪪 Autores
+
+- [Augusto Vieira - RM357293](https://github.com/augusto-vieira)
+- [João - RM357561]()
+- [Lucas - RM](https://github.com/lucas1224420126)
+- [Marcelo Augusto - RM356578]()
+- [Rafael Ribeiro - RM357611](https://github.com/raffaell95)
