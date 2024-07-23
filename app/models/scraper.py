@@ -18,18 +18,20 @@ def download_csv(url):
 def scrape_viticulture_data(category):
     print(category)
     try:
-        response = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/Producao.csv') if category == "Produção" else None # Realizando o download do CSV de Produção
+        if category == "Produção": # Realizando o download do CSV de Produção
+            response = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/Producao.csv') 
         
-        if category == "Processamento": # Realizando o download dos arquivos de Processamento
+        elif category == "Processamento": # Realizando o download dos arquivos de Processamento
             ProcessaViniferas = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ProcessaViniferas.csv') # Realizando o download dos arquivos CSV
             ProcessaAmericanas = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ProcessaAmericanas.csv') # Realizando o download dos arquivos CSV
             ProcessaMesa = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ProcessaMesa.csv') # Realizando o download dos arquivos CSV
             ProcessaSemclass = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ProcessaSemclass.csv') # Realizando o download dos arquivos CSV
             response = [ProcessaViniferas, ProcessaAmericanas, ProcessaMesa, ProcessaSemclass] #Juntando todos os arquivos em um único retorno
 
-        response = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/Comercio.csv') if category == "Comercialização" else None # Realizando o download do CSV de Comercio
+        elif category == "Comercialização": # Realizando o download do CSV de Comercio
+            response = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/Comercio.csv')
 
-        if category == "Importação": # Realizando o download dos arquivos de Importacao
+        elif category == "Importação": # Realizando o download dos arquivos de Importacao
             ImpVinhos = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ImpVinhos.csv') # Realizando o download dos arquivos CSV
             ImpEspumantes = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ImpEspumantes.csv') # Realizando o download dos arquivos CSV
             ImpFrescas = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ImpFrescas.csv') # Realizando o download dos arquivos CSV
@@ -37,7 +39,7 @@ def scrape_viticulture_data(category):
             ImpSuco = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ImpSuco.csv') # Realizando o download dos arquivos CSV
             response = [ImpVinhos, ImpEspumantes, ImpFrescas, ImpPassas, ImpSuco] #Juntando todos os arquivos em um único retorno
 
-        if category == "Exportação": # Realizando o download dos arquivos de Exportacao
+        elif category == "Exportação": # Realizando o download dos arquivos de Exportacao
             ExpVinho = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ExpVinho.csv')# Realizando o download dos arquivos CSV
             ExpEspumantes = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ExpEspumantes.csv')# Realizando o download dos arquivos CSV
             ExpUva = download_csv('http://vitibrasil.cnpuv.embrapa.br/download/ExpUva.csv')# Realizando o download dos arquivos CSV

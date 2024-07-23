@@ -320,6 +320,8 @@ pip-selfcheck.json
 ## Venv
 venv/
 
+annotation.txt 
+
 # Vscode
 .vscode/
 # End of https://www.toptal.com/developers/gitignore/api/python,venv,pycharm,visualstudiocode
