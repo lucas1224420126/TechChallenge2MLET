@@ -100,6 +100,6 @@ Este projeto está licenciado sob a licença XYZ - veja o arquivo [LICENSE](LICE
 
 - [Augusto Vieira - RM357293](https://github.com/augusto-vieira)
 - [João - RM357561]()
-- [Lucas - RM](https://github.com/lucas1224420126)
+- [Lucas - RM357287](https://github.com/lucas1224420126)
 - [Marcelo Augusto - RM356578]()
 - [Rafael Ribeiro - RM357611](https://github.com/raffaell95)
