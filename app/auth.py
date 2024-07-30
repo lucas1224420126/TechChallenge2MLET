@@ -3,6 +3,7 @@ from fastapi import APIRouter, HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from pydantic import BaseModel
+from typing import Union
 
 SECRET_KEY = "your_secret_key"
 ALGORITHM = "HS256"
@@ -17,9 +18,9 @@ class Token(BaseModel):
     token_type: str
 
 class TokenData(BaseModel):
-    username: str | None = None
+    username: Union[str, None] = None # type: ignore
 
-def create_access_token(data: dict, expires_delta: timedelta | None = None):
+def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None):
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.utcnow() + expires_delta

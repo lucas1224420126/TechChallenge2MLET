@@ -15,38 +15,35 @@ Este projeto realiza a extração de dados da Embrapa utilizando o FastAPI, cone
 
 Para configurar o ambiente de desenvolvimento e instalar todas as dependências necessárias, siga os passos abaixo:
 
-1. Clone este repositório:
+1. É Necessario ter o docker instalado, caso não basta ir no site https://www.docker.com/.
+
+2. Clone este repositório:
 
     ```bash
     git clone https://github.com/seu_usuario/seu_projeto.git
     ```
 
-2. Entre no diretório do projeto:
+3. Entre no diretório do projeto:
 
     ```bash
     cd seu_projeto
     ```
 
-3. Crie e ative um ambiente virtual:
+4. Para rodar o projeto basta executar o comando:
 
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+    docker-compose up -d
     ```
+5. Caso precise remover o container é so executar o comando `docker-compose down`
 
-4. Instale as dependências:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Desenvolvimento via container
 
-## Uso
+Caso queria trabalhar dentro do container docker sem precisar instalar nada na maquina basta seguir os passos abaixo:
 
-Para executar o FastAPI, utilize o seguinte comando dentro do seu ambiente virtual:
-
-```bash
-uvicorn app.main:app --reload
-
+1. Instalar a extenção `Dev Containers``
+2. Clicar em anexar janela atual ou clicar no icone `->`
+3. Em seguida vai abrir uma caixa é so navegar ate `/usr/src/techchallenge2mlet`, e clicar em ok
 
 
 
@@ -107,7 +104,7 @@ uvicorn app.main:app --reload
 
 Certifique-se de estar na pasta correta ao executar o comando. Após iniciar, você verá uma mensagem de sucesso e poderá acessar a documentação da API em:
 
-[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+[http://127.0.0.1/docs](http://127.0.0.1/docs)
 
 ## Autenticação
 
